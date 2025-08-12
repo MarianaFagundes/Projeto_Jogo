@@ -43,7 +43,7 @@ class  Heroi(Personagem):
         return f"{super().exibir_detalhes()}\n Habilidade: {self.get_habilidade()}\n"
     
     def ataque_especial(self, alvo):
-        dano = random.randint(self.get_nivel() * 5, self.get_nivel() * 8) # Dano aumentado 
+        dano = random.randint(self.get_nivel() * 5, self.get_nivel() * 8)
         print(f"{self.get_nome} usou a habilidade especial {self.get_habilidade} em {alvo.get_nome()} e causou {dano} de dano!")
     
 # Inimigo: Adversário do usuario 
@@ -63,7 +63,7 @@ class Jogo:
     """  Classe orquestradora do jogo"""
 
     def __init__(self) -> None:
-        self.heroi = Heroi (nome = "Herói", vida = "100", nivel = "5", habilidade="Super Força")
+        self.heroi = Heroi (nome = "Herói", vida = 100, nivel = "5", habilidade="Super Força")
         self.inimigo = Inimigo (nome="Morcego", vida=80, nivel=5,tipo="Voador")
         
     def iniciar_batalha(self):
